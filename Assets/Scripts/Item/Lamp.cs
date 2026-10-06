@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Lamp : MonoBehaviour, IInteractable
@@ -24,10 +25,12 @@ public class Lamp : MonoBehaviour, IInteractable
         if (isOn)
         {
             lampSprite.color = onColor;
+            Debug.Log("Lamp in on");
         }
         else
         {
             lampSprite.color = offColor;
+            Debug.Log("Lamp is off");
         }
     }
 }

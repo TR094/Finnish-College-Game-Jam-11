@@ -22,21 +22,29 @@ public class Hand : MonoBehaviour
 
     private void TryInteract()
     {
-        Vector2 mousePosition =
-            Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 handPosition = transform.position;
 
-        RaycastHit2D hit =
-            Physics2D.Raycast(mousePosition, Vector2.zero);
+        Collider2D hit = Physics2D.OverlapPoint(handPosition);
 
-        if (hit.collider == null)
+        if (hit == null)
+        {
+            Debug.Log("Clicked nothing");
             return;
+        }
+
+        Debug.Log("Clicked: " + hit.gameObject.name);
 
         IInteractable interactable =
-            hit.collider.GetComponent<IInteractable>();
+            hit.GetComponent<IInteractable>();
 
         if (interactable != null)
         {
+            Debug.Log("Found interactable!");
             interactable.Interact();
+        }
+        else
+        {
+            Debug.Log("Object is not interactable");
         }
     }
 }

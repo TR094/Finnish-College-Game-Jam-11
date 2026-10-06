@@ -2,23 +2,24 @@ using UnityEngine;
 
 public class Hand : MonoBehaviour
 {
-    [SerializeField] public SpriteRenderer itemRenderer;
 
-    void Start()
+    private void Start()
     {
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
     }
-
+    // Update is called once per frame
     void Update()
     {
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePos.z = 0f;
-        transform.position = mousePos;
-    }
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = false;
 
-    public void HoldItem(Sprite itemSprite)
-    {
-        itemRenderer.sprite = itemSprite;
+        bool on = true;
+        if (on)
+        {
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mousePos.z = 0;
+            transform.position = mousePos;
+        }
     }
 }

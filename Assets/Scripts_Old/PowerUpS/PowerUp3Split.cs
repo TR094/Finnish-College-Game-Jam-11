@@ -45,7 +45,6 @@ public class PowerUp3Split : MonoBehaviour
 
     }
 
-
     // Update is called once per frame
     void Update()
     {

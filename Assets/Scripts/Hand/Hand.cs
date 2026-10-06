@@ -16,32 +16,27 @@ public class Hand : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            TryPickupItem();
+            TryInteract();
         }
     }
 
-    private void TryPickupItem()
+    private void TryInteract()
     {
-        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 mousePosition =
+            Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
+        RaycastHit2D hit =
+            Physics2D.Raycast(mousePosition, Vector2.zero);
 
-        if (hit.collider != null)
+        if (hit.collider == null)
+            return;
+
+        IInteractable interactable =
+            hit.collider.GetComponent<IInteractable>();
+
+        if (interactable != null)
         {
-            Item item = hit.collider.GetComponent<Item>();
-
-            if (item != null)
-            {
-                PlayerInventory inventory = FindFirstObjectByType<PlayerInventory>();
-
-                if (inventory != null)
-                {
-                    if (inventory.AddItem(item))
-                    {
-                        item.gameObject.SetActive(false);
-                    }
-                }
-            }
+            interactable.Interact();
         }
     }
 }

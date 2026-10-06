@@ -62,7 +62,6 @@ public class HotbarSelector : MonoBehaviour
     private void EquipSelectedItem()
     {
         Item item = inventory.items[selectedSlot];
-
         if (item == null)
         {
             Debug.Log("Nothing equipped.");

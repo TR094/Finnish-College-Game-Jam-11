@@ -678,7 +678,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.03875923, y: -7.966799}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -688,7 +688,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 37.4241, y: 33.895344}
   m_EdgeRadius: 0
 --- !u!1 &259672345
 GameObject:
@@ -782,10 +782,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8200898fd980fef4fb1c40bee8d88321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Inventory
-  itemsParent: {fileID: 0}
-  itemButtonPrefab: {fileID: 8880760376952237701, guid: cb3b0603c129a3a43b57e02300d1efc5, type: 3}
-  hand: {fileID: 1680053289}
-  itemOffset: {x: 80, y: 0}
 --- !u!1 &281947836
 GameObject:
   m_ObjectHideFlags: 0

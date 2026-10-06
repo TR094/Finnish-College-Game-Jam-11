@@ -13,6 +13,7 @@ TagManager:
   - RandomWallDown
   - RandomWallUp
   - InventoryItemUI
+  - RadioSwitch
   layers:
   - Default
   - TransparentFX

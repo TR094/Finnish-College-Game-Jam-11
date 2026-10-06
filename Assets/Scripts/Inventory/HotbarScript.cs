@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HotbarSlotUI : MonoBehaviour
+public class HotbarScript : MonoBehaviour
 {
     public Image itemIcon;
 

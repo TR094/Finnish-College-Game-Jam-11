@@ -4,12 +4,14 @@ using UnityEngine.UI;
 public class HotbarSelector : MonoBehaviour
 {
     public PlayerInventory inventory;
-    public HotbarSlotUI[] slots;
+    public HotbarScript[] slots;
 
     public Color normalColor = Color.white;
     public Color selectedColor = Color.yellow;
 
     private int selectedSlot = 0;
+
+    public string itemEquipped;
 
     private void Start()
     {
@@ -59,7 +61,7 @@ public class HotbarSelector : MonoBehaviour
         EquipSelectedItem();
     }
 
-    private void EquipSelectedItem()
+    public void EquipSelectedItem()
     {
         Item item = inventory.items[selectedSlot];
         if (item == null)
@@ -67,6 +69,8 @@ public class HotbarSelector : MonoBehaviour
             Debug.Log("Nothing equipped.");
             return;
         }
+        itemEquipped = item.itemName;
         Debug.Log("Equipped: " + item.itemName);
     }
+
 }

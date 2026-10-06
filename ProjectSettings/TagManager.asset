@@ -12,6 +12,8 @@ TagManager:
   - PlayerDown
   - RandomWallDown
   - RandomWallUp
+  - InventoryItemUI
+  - RadioSwitch
   layers:
   - Default
   - TransparentFX

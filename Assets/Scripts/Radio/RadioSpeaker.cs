@@ -5,29 +5,44 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class RadioSpeaker : MonoBehaviour, IPointerClickHandler
+public class RadioSpeaker : MonoBehaviour, IPointerClickHandler, IDragHandler
 {
     public float frequency;
+    public float frequencyChangePerPixel = 0.05f;
+    public Transform knobSprite;
+    public float knobRotationDegreesPerPixel = 1f;
     public Toggle radioToggle;
     public TMP_Text frequencyText;
     public AudioSource speaker;
-    public bool batteryInside = false; // no batteries
+    public int batteryInside = 0; // no batteries
     public bool antennaEquipped = false;
     public HotbarSelector hotbarSelector;
 
     public void OnPointerClick(PointerEventData eventData){HandleClick();}
 
+    public void OnDrag(PointerEventData eventData)
+    {
+        if (hotbarSelector.itemEquipped == "Screwdriver")
+        {
+            frequency += eventData.delta.x * frequencyChangePerPixel;
+
+            if (knobSprite != null)
+            {
+                knobSprite.Rotate(0f, 0f, -eventData.delta.x * knobRotationDegreesPerPixel);
+            }
+        }
+    }
+
     private void HandleClick()
     {
         if (hotbarSelector != null && hotbarSelector.itemEquipped == "Clock")
         {
-            batteryInside = true;
+            batteryInside++;
+        }
+        else if (hotbarSelector != null && hotbarSelector.itemEquipped == "antenna")
+        {
             antennaEquipped = true;
         }
-        //else if (hotbarSelector != null && hotbarSelector.itemEquipped == "antenna")
-        //{
-        //    antennaEquipped= true;
-        //}
 
     }
 
@@ -42,7 +57,7 @@ public class RadioSpeaker : MonoBehaviour, IPointerClickHandler
     {
         
         // Use Toggle.isOn rather than comparing the Toggle object to a bool
-        if (batteryInside == true && radioToggle != null && radioToggle.isOn && antennaEquipped == true)
+        if (batteryInside > 0 && radioToggle != null && radioToggle.isOn && antennaEquipped == true)
         {
             frequencyText.text = $"{frequency:F1} MHz";
             if (frequency < 90.0f || frequency > 108.0f)

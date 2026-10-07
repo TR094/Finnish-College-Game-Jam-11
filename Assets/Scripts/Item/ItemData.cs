@@ -4,6 +4,7 @@ public class Item : MonoBehaviour, IInteractable
 {
     public string itemName;
     public Sprite icon;
+    public bool dissapearOnPickup = true;
 
     public void Interact()
     {
@@ -12,7 +13,7 @@ public class Item : MonoBehaviour, IInteractable
         if (inventory == null)
             return;
 
-        if (inventory.AddItem(this))
+        if (inventory.AddItem(this) && dissapearOnPickup == true)
         {
             gameObject.SetActive(false);
         }

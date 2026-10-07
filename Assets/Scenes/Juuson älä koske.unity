@@ -634,7 +634,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.268, y: -8.712}
+  m_AnchoredPosition: {x: 13.791, y: -12.309001}
   m_SizeDelta: {x: 27.582, y: 24.618}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &84382463
@@ -991,8 +991,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -13.618, y: -6.857}
-  m_SizeDelta: {x: 16.944, y: 3.992}
+  m_AnchoredPosition: {x: -17.5, y: -10.468}
+  m_SizeDelta: {x: 23.549, y: 7.955}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &170870374
 MonoBehaviour:
@@ -1041,8 +1041,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 3
-  m_fontSizeBase: 3
+  m_fontSize: 4
+  m_fontSizeBase: 4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1258,8 +1258,8 @@ Transform:
   m_GameObject: {fileID: 185988423}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.808107, y: -14.484348, z: -1614.7122}
-  m_LocalScale: {x: 17.996801, y: 17.996801, z: 17.996801}
+  m_LocalPosition: {x: -22.8, y: -20.3, z: -1614.7122}
+  m_LocalScale: {x: 41.45087, y: 41.45087, z: 41.45087}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1966926569}
@@ -2911,6 +2911,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84ade30e23d56df4c961c84cc923c08b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameController
+  menuAmbiance: {fileID: 0}
+  gameMusic: {fileID: 0}
+  endMusic: {fileID: 0}
+  bgmusicAS: {fileID: 0}
+  GoodEnding: {fileID: 0}
+  BadEnding: {fileID: 0}
 --- !u!4 &1152428634
 Transform:
   m_ObjectHideFlags: 0
@@ -3562,8 +3568,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 72.78, y: -24.68}
-  m_SizeDelta: {x: 5.451, y: 5.451}
+  m_AnchoredPosition: {x: 81.4, y: -16.4}
+  m_SizeDelta: {x: 9.238, y: 9.238}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1663350353
 MonoBehaviour:
@@ -4066,7 +4072,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -11, y: -13.978}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1795143738
@@ -4153,7 +4159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 135.5, y: 64.1}
+  m_AnchoredPosition: {x: 135.5, y: 208.9}
   m_SizeDelta: {x: 1.08, y: 0.873}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &1820018140
@@ -4323,8 +4329,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2.7999992, y: 46.9}
-  m_SizeDelta: {x: -52.813, y: -57.959}
+  m_AnchoredPosition: {x: -30.599998, y: 54.227}
+  m_SizeDelta: {x: -36.876, y: -41.56}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1966926570
 MonoBehaviour:
@@ -4382,10 +4388,15 @@ MonoBehaviour:
   knobRotationDegreesPerPixel: 1
   radioToggle: {fileID: 1795143738}
   frequencyText: {fileID: 170870374}
-  speaker: {fileID: 84382463}
+  speaker: {fileID: 0}
   batteryInside: 0
-  antennaEquipped: 0
   hotbarSelector: {fileID: 1216217481}
+  staticNoise: {fileID: 8300000, guid: aa5a8fc94c2c8534ea8be39e225dd1e7, type: 3}
+  channel1: {fileID: 8300000, guid: 67386faee4cca27469ab39f796cc2e9b, type: 3}
+  channel2: {fileID: 8300000, guid: 8063edb28742b694396f591715a08288, type: 3}
+  channel3: {fileID: 8300000, guid: e464071cc1a1a904986251240cb45eeb, type: 3}
+  channel4: {fileID: 8300000, guid: c2e5597d8e6dcd042ab2a7847461bf26, type: 3}
+  tuningTolerance: 0.2
 --- !u!224 &1982297346
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4473,10 +4484,10 @@ MonoBehaviour:
   speaker: {fileID: 1152428635}
   keypadCanvas: {fileID: 230902502}
   codeDisplay: {fileID: 2043687474}
-  firstDigit: 0
-  secondDigit: 5
-  thirdDigit: 9
-  fourthDigit: 4
+  firstDigit: 3
+  secondDigit: 8
+  thirdDigit: 4
+  fourthDigit: 9
   safeOpenedCount: 0
 --- !u!114 &2004931363
 MonoBehaviour:
@@ -4595,14 +4606,14 @@ MonoBehaviour:
   m_VerticalScrollbarEventHandler: {fileID: 0}
   m_LayoutGroup: {fileID: 0}
   m_ScrollSensitivity: 1
-  m_ContentType: 8
-  m_InputType: 2
+  m_ContentType: 0
+  m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 4
+  m_KeyboardType: 0
   m_LineType: 0
   m_HideMobileInput: 0
   m_HideSoftKeyboard: 0
-  m_CharacterValidation: 1
+  m_CharacterValidation: 0
   m_RegexValue: 
   m_GlobalPointSize: 1
   m_CharacterLimit: 4

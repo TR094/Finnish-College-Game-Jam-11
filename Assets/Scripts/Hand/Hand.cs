@@ -1,8 +1,33 @@
+<<<<<<< Updated upstream
     using UnityEngine;
 
     public class Hand : MonoBehaviour
     {
         private void Start()
+=======
+using System;
+using UnityEngine;
+
+public class Hand : MonoBehaviour
+{
+
+    [SerializeField] private Vector2 cursorOffset;
+
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = false;
+    }
+
+    private void Update()
+    {
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePos.z = 0;
+
+        transform.position = mousePos + (Vector3)cursorOffset;
+
+        if (Input.GetMouseButtonDown(0))
+>>>>>>> Stashed changes
         {
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = false;
@@ -22,9 +47,10 @@
 
     private void TryInteract()
     {
-        Vector2 handPosition = transform.position;
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePos.z = 0;
 
-        Collider2D hit = Physics2D.OverlapPoint(handPosition);
+        Collider2D hit = Physics2D.OverlapPoint(mousePos);
 
         if (hit == null)
         {
@@ -34,17 +60,18 @@
 
         Debug.Log("Clicked: " + hit.gameObject.name);
 
+<<<<<<< Updated upstream
         IInteractable interactable =
             hit.GetComponentInParent<IInteractable>();
+=======
+        IInteractable interactable = hit.GetComponent<IInteractable>();
+>>>>>>> Stashed changes
 
         if (interactable != null)
         {
             Debug.Log("Found interactable!");
             interactable.Interact();
         }
-        else
-        {
-            Debug.Log("Object is not interactable");
-        }
     }
+
 }

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 52ffbbc721ef25a459b950f1f94482bc
+guid: 757b06067ca46cb498c828c273d1747b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1175848550677772830
-    second: GameBackgroundAssetskasi_0
+      213: 8840610275659064613
+    second: radioknobwscrew_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,43 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GameBackgroundAssetskasi_0
+      name: radioknobwscrew_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 72
-        height: 92
+        x: 125
+        y: 68
+        width: 22
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e1a7ec4e604715010800000000000000
-      internalID: 1175848550677772830
+      spriteID: 525a356c43820ba70800000000000000
+      internalID: 8840610275659064613
       vertices: []
       indices: 
       edges: []
@@ -161,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      GameBackgroundAssetskasi_0: 1175848550677772830
+      radioknobwscrew_0: 8840610275659064613
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

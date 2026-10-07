@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e96f8bdf67d5f7a4c800b99b08d7d22b
+guid: f4b4d807e9a452a4f94f5ff361d7d527
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8448553748426482528
-    second: ilmarin_poyta_oikea_0
+      213: -7286358657943557323
+    second: nuori_tr_pankki_aukinainen_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -97,7 +97,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -110,7 +110,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
+    buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ilmarin_poyta_oikea_0
+      name: nuori_tr_pankki_aukinainen_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 63
-        width: 306
-        height: 76
+        x: 73
+        y: 1
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 06361c03fda4f3570800000000000000
-      internalID: 8448553748426482528
+      spriteID: 53bae27c767a1ea90800000000000000
+      internalID: -7286358657943557323
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ilmarin_poyta_oikea_0: 8448553748426482528
+      nuori_tr_pankki_aukinainen_0: -7286358657943557323
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

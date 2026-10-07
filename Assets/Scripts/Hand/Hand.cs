@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     using UnityEngine;
 
@@ -5,6 +6,8 @@
     {
         private void Start()
 =======
+=======
+>>>>>>> kristian-uusi
 using System;
 using UnityEngine;
 
@@ -60,12 +63,16 @@ public class Hand : MonoBehaviour
 
         Debug.Log("Clicked: " + hit.gameObject.name);
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
         IInteractable interactable =
             hit.GetComponentInParent<IInteractable>();
 =======
         IInteractable interactable = hit.GetComponent<IInteractable>();
 >>>>>>> Stashed changes
+=======
+        IInteractable interactable = hit.GetComponent<IInteractable>();
+>>>>>>> kristian-uusi
 
         if (interactable != null)
         {
@@ -74,4 +81,8 @@ public class Hand : MonoBehaviour
         }
     }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> kristian-uusi

@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class HotbarUI : MonoBehaviour
+public class HotbarUIScript : MonoBehaviour
 {
     public PlayerInventory inventory;
-    public HotbarSlotUI[] slots;
+    public HotbarScript[] slots;
 
     private void Start()
     {

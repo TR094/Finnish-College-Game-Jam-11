@@ -4,7 +4,7 @@ public class PlayerInventory : MonoBehaviour
 {
     public Item[] items = new Item[5];
 
-    public HotbarUI hotbarUI;
+    public HotbarUIScript hotbarUI;
 
     public bool AddItem(Item item)
     {

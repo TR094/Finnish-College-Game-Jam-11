@@ -13,9 +13,17 @@ public class Item : MonoBehaviour, IInteractable
         if (inventory == null)
             return;
 
-        if (inventory.AddItem(this) && dissapearOnPickup == true)
+        if (inventory.AddItem(this) && dissapearOnPickup)
         {
             gameObject.SetActive(false);
+
+            Drawer drawer = GetComponentInParent<Drawer>();
+
+            if (drawer != null)
+            {
+                drawer.ItemTaken();
+            }
         }
     }
+
 }

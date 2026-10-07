@@ -90,6 +90,8 @@ public class GameController : MonoBehaviour
 
     public void goodEnding()
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene("GoodEnding");
     }
 

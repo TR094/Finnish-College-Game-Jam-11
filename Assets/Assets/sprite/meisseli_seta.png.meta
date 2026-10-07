@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: de900661bf15b414a93609e4b3501f38
+guid: 479144fe55c36354cb8b5f1f3f7fc981
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6692973870618005354
-    second: tr_paristo_0
+      213: 5690677367134598459
+    second: meisseli_seta_0
+  - first:
+      213: 8549547870080454177
+    second: meisseli_seta_1
+  - first:
+      213: -6345535029999192345
+    second: meisseli_seta_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,23 +132,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tr_paristo_0
+      name: meisseli_seta_1
       rect:
         serializedVersion: 2
-        x: 124
-        y: 78
-        width: 31
-        height: 12
+        x: 132
+        y: 0
+        width: 12
+        height: 63
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 690b7deb9b7cd13a0800000000000000
-      internalID: -6692973870618005354
+      spriteID: 12ec75a8d7816a670800000000000000
+      internalID: 8549547870080454177
       vertices: []
       indices: 
       edges: []
@@ -151,7 +157,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b621554b847189f44a86f406b6bd1522
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +167,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      tr_paristo_0: -6692973870618005354
+      meisseli_seta_0: 5690677367134598459
+      meisseli_seta_1: 8549547870080454177
+      meisseli_seta_2: -6345535029999192345
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

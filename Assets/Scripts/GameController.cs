@@ -55,6 +55,10 @@ public class GameController : MonoBehaviour
     [Tooltip("Any other AudioSources (e.g. a separate background music player) to stop when the ending starts.")]
     public AudioSource[] stopOnEnding;
 
+    [Header("Ending UI")]
+    public GameObject endingButton;
+    public float endingButtonDelay = 25f;
+
     bool badEndingStarted; // stops the sequence from starting twice
 
     enum gamestate
@@ -103,6 +107,12 @@ public class GameController : MonoBehaviour
     {
         SceneManager.LoadScene("Juuson älä koske");
     }
+    public void ReStartGame()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        SceneManager.LoadScene("Main Menu");
+    }
 
     public void QuitGame()
     {
@@ -141,34 +151,6 @@ public class GameController : MonoBehaviour
 
                 break;
 
-
-            //    case gamestate.pause:
-
-            //        // Pause music
-            //        if (bgmusicAS != null)
-            //        {
-            //            bgmusicAS.Pause();
-            //        }
-
-            //        break;
-
-
-            //    case gamestate.goodending:
-
-            //        // Show good ending
-            //        GoodEnding.SetActive(true);
-            //        BadEnding.SetActive(false);
-
-            //        // Play ending music
-            //        if (bgmusicAS != null && endMusic != null)
-            //        {
-            //            bgmusicAS.clip = endMusic;
-            //            bgmusicAS.Play();
-            //        }
-
-            //        break;
-
-
             case gamestate.badending:
 
                 if (!badEndingStarted)
@@ -188,8 +170,12 @@ public class GameController : MonoBehaviour
         if (GoodEnding != null) GoodEnding.SetActive(false);
         if (BadEnding != null) BadEnding.SetActive(true);
 
+        // Start the ending immediately
         ShutDownGameplay();
         PlayEndMusic();
+
+        // Start the 25-second button timer from this exact point
+        StartCoroutine(ShowEndingButtonAfterDelay());
 
         yield return PlayOverlayAnimation();
 
@@ -197,6 +183,14 @@ public class GameController : MonoBehaviour
             yield return new WaitForSecondsRealtime(delayBeforeFade);
 
         yield return FadeToBlack();
+    }
+
+    IEnumerator ShowEndingButtonAfterDelay()
+    {
+        yield return new WaitForSecondsRealtime(endingButtonDelay);
+
+        if (endingButton != null)
+            endingButton.SetActive(true);
     }
 
     // Switches off player control, hides the cursor sprite and stops the normal music.
@@ -244,7 +238,11 @@ public class GameController : MonoBehaviour
 
         // Keep the overlay hidden until it's time.
         gifOverlay.gameObject.SetActive(false);
+        gifOverlay.sprite = gifFrames[0];
+
         yield return WaitForMusicTime(gifStartDelay);
+
+        gifOverlay.sprite = gifFrames[0];
         gifOverlay.gameObject.SetActive(true);
 
         // The frame is worked out from elapsed time (instead of waiting a fixed time per frame),
@@ -306,5 +304,6 @@ public class GameController : MonoBehaviour
         }
 
         fadeToBlack.alpha = 1f;
+        fadeToBlack.blocksRaycasts = false;
     }
 }

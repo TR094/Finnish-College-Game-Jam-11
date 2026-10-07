@@ -1,6 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 public class GameController : MonoBehaviour
 {
     // Music
@@ -45,7 +49,7 @@ public class GameController : MonoBehaviour
 
     public void goodEnding()
     {
-        StateControl(gamestate.goodending);
+        SceneManager.LoadScene("GoodEnding");
     }
 
     public void badEnding()
@@ -60,7 +64,11 @@ public class GameController : MonoBehaviour
     public void QuitGame()
     {
         Debug.Log("Quitting game...");
-
+#if UNITY_EDITOR
+        EditorApplication.isPlaying = false;
+#else
+    Application.Quit();
+#endif
         Application.Quit();
     }
 

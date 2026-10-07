@@ -18,6 +18,8 @@ public class RadioSpeaker : MonoBehaviour, IPointerClickHandler, IDragHandler
     public bool antennaEquipped = false;
     public HotbarSelector hotbarSelector;
 
+    public AudioSource channel1;
+
     public void OnPointerClick(PointerEventData eventData){HandleClick();}
 
     public void OnDrag(PointerEventData eventData)
@@ -39,10 +41,10 @@ public class RadioSpeaker : MonoBehaviour, IPointerClickHandler, IDragHandler
         {
             batteryInside++;
         }
-        else if (hotbarSelector != null && hotbarSelector.itemEquipped == "antenna")
-        {
-            antennaEquipped = true;
-        }
+        //else if (hotbarSelector != null && hotbarSelector.itemEquipped == "antenna")
+        //{
+        //    antennaEquipped = true;
+        //}
 
     }
 
@@ -57,7 +59,7 @@ public class RadioSpeaker : MonoBehaviour, IPointerClickHandler, IDragHandler
     {
         
         // Use Toggle.isOn rather than comparing the Toggle object to a bool
-        if (batteryInside > 0 && radioToggle != null && radioToggle.isOn && antennaEquipped == true)
+        if (batteryInside > 0 && radioToggle != null && radioToggle.isOn && antennaEquipped == false)
         {
             frequencyText.text = $"{frequency:F1} MHz";
             if (frequency < 90.0f || frequency > 108.0f)

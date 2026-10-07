@@ -33,7 +33,6 @@ public class PlayerInventory : MonoBehaviour
     {
         if (slot < 0 || slot >= items.Length)
             return null;
-
         return items[slot];
     }
 }

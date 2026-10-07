@@ -1,24 +1,24 @@
-using UnityEngine;
+    using UnityEngine;
 
-public class Hand : MonoBehaviour
-{
-    private void Start()
+    public class Hand : MonoBehaviour
     {
-        Cursor.lockState = CursorLockMode.Confined;
-        Cursor.visible = false;
-    }
-
-    private void Update()
-    {
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePos.z = 0;
-        transform.position = mousePos;
-
-        if (Input.GetMouseButtonDown(0))
+        private void Start()
         {
-            TryInteract();
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = false;
         }
-    }
+
+        private void Update()
+        {
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mousePos.z = 0;
+            transform.position = mousePos;
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                TryInteract();
+            }
+        }
 
     private void TryInteract()
     {
@@ -35,7 +35,7 @@ public class Hand : MonoBehaviour
         Debug.Log("Clicked: " + hit.gameObject.name);
 
         IInteractable interactable =
-            hit.GetComponent<IInteractable>();
+            hit.GetComponentInParent<IInteractable>();
 
         if (interactable != null)
         {

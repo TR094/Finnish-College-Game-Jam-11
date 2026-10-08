@@ -105,7 +105,7 @@ public class GameController : MonoBehaviour
     }
     public void StartGame()
     {
-        SceneManager.LoadScene("Juuson älä koske");
+        SceneManager.LoadScene("GamePlay");
     }
     public void ReStartGame()
     {

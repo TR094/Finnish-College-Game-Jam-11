@@ -10,6 +10,7 @@ public class Safe : MonoBehaviour, IPointerClickHandler
     [Header("UI Canvas References")]
     [SerializeField] private GameObject keypadCanvas;
     [SerializeField] private TMP_InputField codeDisplay;
+    [SerializeField] private GameObject SafeOpen;
 
     [Header("Combination Settings")]
     [SerializeField] private int firstDigit = 0;
@@ -21,7 +22,7 @@ public class Safe : MonoBehaviour, IPointerClickHandler
 
     private void Start()
     {
-        
+        SafeOpen.SetActive(false); // Enables the SafeOpen object
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -45,6 +46,7 @@ public class Safe : MonoBehaviour, IPointerClickHandler
 
                 safeOpenedCount = 1;
                 gameObject.SetActive(false); // Disables the safe object
+                SafeOpen.SetActive(true); // Enables the SafeOpen object
             }
             else
             {

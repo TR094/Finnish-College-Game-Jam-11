@@ -417,6 +417,8 @@ MonoBehaviour:
   disableOnEnding: []
   hideOnEnding: []
   stopOnEnding: []
+  endingButton: {fileID: 0}
+  endingButtonDelay: 25
 --- !u!4 &122387604
 Transform:
   m_ObjectHideFlags: 0

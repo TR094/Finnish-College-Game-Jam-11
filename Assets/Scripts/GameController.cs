@@ -23,6 +23,9 @@ public class GameController : MonoBehaviour
     public GameObject GoodEnding;
     public GameObject BadEnding;
 
+    public GameObject hand;
+    public GameObject screw;
+
     [Header("Bad ending sequence")]
     [Tooltip("UI Image that plays the overlay animation. Can be a child of the BadEnding panel.")]
     public Image gifOverlay;
@@ -73,6 +76,8 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
+        hand.SetActive(true);
+        screw.SetActive(true);
         // Only look for an AudioSource on this object if none was assigned in the Inspector.
         // (Before, this line overwrote the Inspector value with null when there was no AudioSource here.)
         if (bgmusicAS == null)
@@ -89,6 +94,7 @@ public class GameController : MonoBehaviour
 
     public void startPlay()
     {
+        Invoke(nameof(badEnding), 600f);
         StateControl(gamestate.playing);
     }
 
@@ -101,6 +107,7 @@ public class GameController : MonoBehaviour
 
     public void badEnding()
     {
+        
         StateControl(gamestate.badending);
     }
     public void StartGame()
@@ -188,6 +195,7 @@ public class GameController : MonoBehaviour
     IEnumerator ShowEndingButtonAfterDelay()
     {
         yield return new WaitForSecondsRealtime(endingButtonDelay);
+        Cursor.visible = true;
 
         if (endingButton != null)
             endingButton.SetActive(true);
@@ -233,6 +241,8 @@ public class GameController : MonoBehaviour
     // and stays on the last frame.
     IEnumerator PlayOverlayAnimation()
     {
+        hand.SetActive(false);
+        screw.SetActive(false);
         if (gifOverlay == null || gifFrames == null || gifFrames.Length == 0)
             yield break;
 

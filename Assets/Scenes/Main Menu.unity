@@ -407,6 +407,8 @@ MonoBehaviour:
   gameMusicLooper: {fileID: 0}
   GoodEnding: {fileID: 0}
   BadEnding: {fileID: 0}
+  hand: {fileID: 0}
+  screw: {fileID: 0}
   gifOverlay: {fileID: 0}
   gifFrames: []
   gifFps: 12
@@ -1014,7 +1016,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: c06b8b4d218024843a83f6e7a5111d46, type: 3}
+  m_Resource: {fileID: 8300000, guid: b08615861d8966f4696552a726f49a9f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.3
   m_Pitch: 1

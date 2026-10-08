@@ -1423,7 +1423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Item
   itemName: Clock
   icon: {fileID: -6692973870618005354, guid: de900661bf15b414a93609e4b3501f38, type: 3}
-  dissapearOnPickup: 0
+  dissapearOnPickup: 1
 --- !u!114 &183471418
 MonoBehaviour:
   m_ObjectHideFlags: 0

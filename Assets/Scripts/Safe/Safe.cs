@@ -1,9 +1,14 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
+using UnityEngine.UIElements;
 
 public class Safe : MonoBehaviour, IPointerClickHandler
 {
+    public Sprite normalSprite;
+    public Sprite openSprite;
+    private Image image;
+
     [Header("Audio & Systems")]
     public AudioSource speaker;
 
@@ -21,7 +26,7 @@ public class Safe : MonoBehaviour, IPointerClickHandler
 
     private void Start()
     {
-        
+        image = GetComponent<Image>();
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -44,11 +49,12 @@ public class Safe : MonoBehaviour, IPointerClickHandler
                 if (speaker != null) speaker.Play();
 
                 safeOpenedCount = 1;
-                gameObject.SetActive(false); // Disables the safe object
+                image.sprite = openSprite;
             }
             else
             {
                 Debug.Log("Incorrect combination.");
+                image.sprite = normalSprite;
             }
         }
         else

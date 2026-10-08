@@ -5055,15 +5055,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820018138}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 31.5, y: 45.705883, z: 3.1512353}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.9156976, y: 0.9141177, z: 0.97592205}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1982297346}
+  m_Father: {fileID: 2004931355}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 135.5, y: 208.9}
+  m_AnchoredPosition: {x: 0.00579834, y: 0}
   m_SizeDelta: {x: 1.08, y: 0.873}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &1820018140
@@ -5452,7 +5452,6 @@ RectTransform:
   m_Children:
   - {fileID: 1303816625}
   - {fileID: 2004931355}
-  - {fileID: 1820018139}
   - {fileID: 1744846900}
   - {fileID: 183471416}
   - {fileID: 1966926569}
@@ -5496,6 +5495,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 230902503}
+  - {fileID: 1820018139}
   m_Father: {fileID: 1982297346}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -5523,6 +5523,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f63f1ce48211af459771552f45a644b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Safe
+  normalSprite: {fileID: -8634857526398391097, guid: 191f97216e8f4c7469a5345c473e3b77, type: 3}
+  openSprite: {fileID: -7286358657943557323, guid: f4b4d807e9a452a4f94f5ff361d7d527, type: 3}
   speaker: {fileID: 1152428635}
   keypadCanvas: {fileID: 230902502}
   codeDisplay: {fileID: 2043687474}
